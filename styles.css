@@ -11,6 +11,7 @@ body {
     padding: 20px;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 /* Header styles */
@@ -21,6 +22,7 @@ header {
     text-align: center;
 }
 
+/* Navigation styles */
 nav ul {
     list-style: none;
     padding: 0;
@@ -37,7 +39,7 @@ nav ul li a {
 }
 
 h1, h2 {
-    color: #333;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
@@ -48,6 +50,7 @@ section {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s, color 0.5s;
 }
 
 /* Form styles */
@@ -88,4 +91,42 @@ footer {
     padding: 10px;
     background-color: #333;
     color: #fff;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+
+/* Dark theme header styles */
+header.dark-theme {
+    background-color: #222;
+}
+
+/* Dark theme section styles */
+body.dark-theme section {
+    background-color: #444;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+/* Dark theme button styles */
+button#theme-toggle {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+
+button#theme-toggle:hover {
+    background-color: #777;
+}
+
+/* Dark theme toggle button styles */
+body.dark-theme button#theme-toggle {
+    background-color: #ccc;
+    color: #333;
 }
