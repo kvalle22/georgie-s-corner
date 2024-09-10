@@ -39,7 +39,7 @@ nav ul li a {
 }
 
 h1, h2 {
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 10px;
 }
 
@@ -95,7 +95,7 @@ footer {
 
 /* Dark theme styles */
 body.dark-theme {
-    background-color: #2b2b2b;
+    background-color: #1f2021;
     color: #ffffff;
 }
 
@@ -109,6 +109,12 @@ body.dark-theme section {
     background-color: #444;
     color: #ffffff;
     border: 1px solid #555;
+}
+
+/* Dark theme h1 and h2 styles */
+body.dark-theme h1,
+body.dark-theme h2 {
+    color: #ffffff; /* Change color to white or any light color */
 }
 
 /* Dark theme button styles */
@@ -129,4 +135,57 @@ button#theme-toggle:hover {
 body.dark-theme button#theme-toggle {
     background-color: #ccc;
     color: #333;
+}
+
+/* FAQ Section Styles */
+#faq {
+    margin: 20px 0;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #ddd;
+}
+
+.faq-toggle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Dark theme FAQ styles */
+body.dark-theme #faq .faq-question {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark-theme #faq .faq-answer {
+    background-color: #666;
+    color: #fff;
+    border: 1px solid #777;
+}
+
+body.dark-theme #faq .faq-toggle {
+    color: #fff;
 }

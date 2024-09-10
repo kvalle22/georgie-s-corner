@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Georgieboy's Memorial Site</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -32,7 +32,7 @@
         <p>Write a little about yourself or your business here. You can also add images or videos.</p>
     </section>
 
-    <section id="contact">
+    <!-- <section id="contact">
         <h2>Contact</h2>
         <form>
             <label for="name">Name:</label>
@@ -43,11 +43,35 @@
             <br><br>
             <input type="submit" value="Submit">
         </form>
+    </section> -->
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>What is your return policy?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Our return policy is 30 days for a full refund. Please ensure the item is in its original condition.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>How do I track my order?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>You can track your order using the tracking number provided in your confirmation email.</p>
+            </div>
+        </div>
+        <!-- Add more FAQ items as needed -->
     </section>
 
     <footer>
         <p>&copy; 2024 Kaze@ RHEnterprises. All Rights Reserved.</p>
     </footer>
+
     <!-- Add JavaScript here, before the closing body tag -->
     <script src="script.js"></script>
 </body>
