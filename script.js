@@ -1,3 +1,4 @@
+// Theme Toggle Functionality
 const toggleButton = document.getElementById('theme-toggle');
 const body = document.body;
 
@@ -14,14 +15,15 @@ toggleButton.addEventListener('click', function () {
     
     // Update button text based on theme
     if (body.classList.contains('dark-theme')) {
-        toggleButton.textContent = '☀️ Modo Claro';
+        toggleButton.textContent = '☀️ Light Mode';
         localStorage.setItem('theme', 'dark-theme'); // Save the theme in localStorage
     } else {
-        toggleButton.textContent = '🌙 Modo Oscuro';
+        toggleButton.textContent = '🌙 Dark Mode';
         localStorage.setItem('theme', ''); // Clear saved theme
     }
 });
 
+// FAQ Toggle Functionality
 function toggleAnswer(questionElement) {
     const answerElement = questionElement.nextElementSibling;
     const toggleElement = questionElement.querySelector('.faq-toggle');
@@ -34,3 +36,13 @@ function toggleAnswer(questionElement) {
         toggleElement.textContent = '-';
     }
 }
+
+// Existing JavaScript...
+
+// Toggle mobile menu
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
+});

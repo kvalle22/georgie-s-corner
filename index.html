@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your website's description here">
-    <title>Your Webpage Title</title>
+    <meta name="description" content="El rincon del pequeño Georgie">
+    <title>Georgie's Corner</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,26 +16,64 @@
         <h1>‎ ‎ ‎ </h1>
 
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#Spotify">Spotify</a></li>
+                <li><a href="#Windows">Windows</a></li>
+                <li><a href="#Streaming">Streaming</a></li>
+                <li><a href="#Office">Office</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="menu-toggle">☰ Menu</button> <!-- Hamburger menu button -->
         </nav>
-        <!-- Dark Mode Toggle Button -->
+                <!-- Dark Mode Toggle Button -->
         <button id="theme-toggle">🌙 Dark Mode</button>
     </header>
 
     <section class="container" id="home">
-        <h2>Home</h2>
-        <p>This is your homepage content. Introduce yourself or your project here.</p>
+        <div class="home-content">
+            <div class="home-text">
+                <h2>Bienvenido a Georgie's Corner!</h2>
+                <p>¡En este sitio podrás encontrar toda la información de los servicios que proveo, desde soporte para computadoras, activaciones de Windows, instalación de Office, acceso a servidor privado con más de 800 películas y muchos más! Los precios se encuentran en la parte de preguntas frecuentes (FAQ). Cada sección tiene un botón que te permitirá enviarme un mensaje por WhatsApp donde podrás hacerme alguna otra consulta sobre los servicios descritos o de otros servicios que no encuentres aquí.</p>
+            </div>
+            <img src="assets/happy_georgie.jpg" alt="Tiny Picture" class="home-image">
+        </div>
     </section>
+    
 
-    <section class="container" id="about">
-        <h2>About</h2>
-        <p>Write a little about yourself or your business here. You can also add images or videos.</p>
+    
+    <section class="gallery-section container" id="Spotify">
+        <!-- First Gallery Section: Text on the Left, Gallery on the Right -->
+        <div class="gallery-container">
+            <div class="gallery-text fade-in">
+                <h2>¿Quieres tener Spotify . . . pero sin tener que pagar mensualmente por membresías?</h2>
+
+            </div>
+            <div class="gallery-images fade-in">
+                <img src="assets/spotify/Spotify.jpg" alt="Image 1">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+    
+        <!-- Second Gallery Section: Gallery on the Left, Text on the Right -->
+        <div class="gallery-container reverse">
+            <div class="gallery-text fade-in">
+                <p>Puedo realizar la activación de Spotify para PC</p>
+                <p>Dile adiós a los anuncios</p>
+                <p>Podrás reproducir canciones en cualquier orden</p>
+                <p>Puedes ingresar con tu propia cuenta ya existente!</p>
+                <p>Es activación única</p>
+            </div>
+            <div class="gallery-images fade-in">
+                <img src="assets/spotify/01.png" alt="Image 2">
+                <!-- Add more images as needed -->
+            </div>
+
+        </div>
     </section>
+    
 
+      
     <!-- <section id="contact">
         <h2>Contact</h2>
         <form>
@@ -48,6 +87,9 @@
         </form>
     </section> -->
 
+
+
+    
     <section class="container" id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">

@@ -1,4 +1,5 @@
 /* Basic CSS Reset */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,16 +7,16 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     padding: 0px;
     background-color: #f4f4f4;
     color: #333;
     transition: background-color 0.5s, color 0.5s;
-    background-image: url('assets/georgie mouse pad_border.png');
-    background-size: cover; /* Adjusts the image size to cover the entire element */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-image: url('assets/georgie\ mouse\ pad_border.png');
+    background-size: auto; /* Adjusts the image size to cover the entire element */
+    background-position: 50%; /* Centers the image */
+    background-repeat: repeat; /* Prevents the image from repeating */
 }
 
 /* Header styles */
@@ -93,7 +94,7 @@ footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px;
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
 }
 
@@ -110,7 +111,7 @@ header.dark-theme {
 
 /* Dark theme section styles */
 body.dark-theme section {
-    background-color: #444;
+    background-color: #000000;
     color: #ffffff;
     border: 1px solid #555;
 }
@@ -123,7 +124,7 @@ body.dark-theme h2 {
 
 /* Dark theme button styles */
 button#theme-toggle {
-    position: absolute; /* Position the button */
+    position: fixed; /* Position the button */
     top: 5px; /* Adjust distance from the top */
     right: 5px; /* Adjust distance from the right */
     cursor: pointer;
@@ -132,7 +133,7 @@ button#theme-toggle {
     background-color: #555;
     color: #fff;
     border-radius: 5px;
-    z-index: 1; /* Ensures it stays on top of other elements */
+    z-index: 1000; /* Ensures it stays on top of other elements */
 }
 
 button#theme-toggle:hover {
@@ -221,34 +222,37 @@ header {
     color: #fff; /* Ensures text is readable */
     text-align: center;
     position: relative;
+    height: 250px; /* Adjust header height */
 
 }
 /* Navigation bar styles */
 nav {
-    position: absolute; /* To move it outside of the normal flow */
+    position: fixed; /* To move it outside of the normal flow */
     top: 0; /* Align at the top */
     left: 0; /* Align to the left */
     background-color: #000000; /* Dark grey background */
     width: 100%; /* Full-width navigation bar */
     padding: 10px 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 /* Navigation list styles */
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 /* Navigation links */
 nav ul li {
-    margin-right: 20px;
+    display: inline;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
     padding: 10px 15px;
 }
 
@@ -257,9 +261,215 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-body {
-    background-image: url('assets/georgie\ mouse\ pad_border.png');
-    background-size: cover; /* Adjusts the image size to cover the entire element */
-    background-position: center; /* Centers the image */
-    background-repeat: round; /* Prevents the image from repeating */
+.gallery-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px 0;
+    
+}
+
+.gallery-text, .gallery-images {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Reverse layout */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Gallery Images Styling */
+.gallery-images img {
+    max-width: 950px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.gallery-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 1500px
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Adding delay for each line */
+/* Additional styling for text in the gallery */
+.gallery-text h2 {
+    font-size: 2.5rem; /* Example size */
+    font-weight: bold; /* Optional: Make the header bold */
+    margin-bottom: 15px; /* Space below the header */
+}
+
+.gallery-text p {
+    font-size: 1.1rem; /* Example size */
+    line-height: 1.5; /* Improve readability */
+    margin-bottom: 10px; /* Space between paragraphs */
+}
+
+/* Container for the image and text */
+.home-content {
+    display: flex; /* Use flexbox to align items side by side */
+    align-items: flex-start; /* Align items at the start of the container (top) */
+    gap: 10px; /* Space between the text and image */
+}
+
+/* Style for the text container */
+.home-text {
+    flex: 1; /* Take up the remaining space */
+    font-family: 'Open Sans', sans-serif; /* Apply Open Sans font */
+    text-align: justify;
+}
+
+/* Style for the image */
+.home-image {
+    max-width: 100px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Optional: for rounded corners */
+}
+
+/* Existing styles... */
+/* Hide menu button on larger screens */
+#menu-toggle {
+    display: none; /* Initially hidden */
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+    /* Body */
+    body {
+        font-size: 16px; /* Scale down the base font size */
+    }
+
+    /* Header and navigation */
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding-left: 20px; /* Add padding for readability */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Space between menu items */
+    }
+
+    /* Add a menu toggle button (hamburger) */
+    #menu-toggle {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px; /* Move it to the left side */
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        z-index: 1001;
+    }
+    
+
+    /* Hide the navigation menu by default */
+    nav ul {
+        display: none; /* Initially hidden */
+    }
+
+    /* Show navigation menu when active */
+    nav ul.active {
+        display: flex; /* Display when the toggle is clicked */
+    }
+
+    /* Gallery section */
+    .gallery-container {
+        flex-direction: column; /* Stack text and images vertically */
+    }
+
+    .gallery-images img {
+        max-width: 100%; /* Make images responsive */
+    }
+
+    /* Home section */
+    .home-content {
+        flex-direction: column; /* Stack text and images */
+        gap: 20px; /* Add space between text and images */
+    }
+
+    .home-image {
+        max-width: 150px; /* Adjust image size for mobile */
+    }
+
+    /* FAQ section */
+    #faq {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .faq-item {
+        margin-bottom: 15px; /* Add more space between FAQ items */
+    }
+
+    .faq-question {
+        font-size: 1.2rem; /* Increase readability */
+    }
+
+    /* Footer */
+    footer {
+        font-size: 14px; /* Smaller footer font size for mobile */
+        padding: 15px;
+    }
+}
+
+/* For extra small screens (phones) */
+@media (max-width: 480px) {
+    /* Further adjust font size */
+    body {
+        font-size: 14px; /* Smaller base font size */
+    }
+
+    /* Header and nav */
+    nav ul li a {
+        font-size: 16px; /* Smaller font size for nav links */
+    }
+
+    /* Home section */
+    .home-content {
+        gap: 15px; /* Reduce gap between content */
+    }
+
+    .home-text {
+        font-size: 1rem; /* Adjust text size */
+        text-align: justify;
+    }
+
+    .home-image {
+        max-width: 120px; /* Smaller image size */
+    }
+
+    /* Gallery section */
+    .gallery-text h2 {
+        font-size: 2rem; /* Adjust gallery header size */
+    }
+
+    .gallery-text p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .gallery-images img {
+        max-width: 100%; /* Full-width images on mobile */
+    }
 }
