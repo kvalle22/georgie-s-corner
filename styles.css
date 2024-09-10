@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 20px;
+    padding: 0px;
     background-color: #f4f4f4;
     color: #333;
     transition: background-color 0.5s, color 0.5s;
@@ -123,12 +123,16 @@ body.dark-theme h2 {
 
 /* Dark theme button styles */
 button#theme-toggle {
+    position: absolute; /* Position the button */
+    top: 5px; /* Adjust distance from the top */
+    right: 5px; /* Adjust distance from the right */
     cursor: pointer;
     padding: 10px;
     border: none;
     background-color: #555;
     color: #fff;
     border-radius: 5px;
+    z-index: 1; /* Ensures it stays on top of other elements */
 }
 
 button#theme-toggle:hover {
@@ -206,6 +210,51 @@ body.dark-theme #faq .faq-toggle {
     width: 100%;
     margin: 0 auto; /* Center the container horizontally */
     padding: 20px; /* Adds space around the content */
+}
+
+header {
+    background-image: url('assets/georgie banner.png'); /* Adjust the path if necessary */
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 20px;
+    color: #fff; /* Ensures text is readable */
+    text-align: center;
+    position: relative;
+
+}
+/* Navigation bar styles */
+nav {
+    position: absolute; /* To move it outside of the normal flow */
+    top: 0; /* Align at the top */
+    left: 0; /* Align to the left */
+    background-color: #000000; /* Dark grey background */
+    width: 100%; /* Full-width navigation bar */
+    padding: 10px 0;
+}
+
+/* Navigation list styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Navigation links */
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Lighter grey on hover */
+    border-radius: 4px;
 }
 
 body {
