@@ -262,15 +262,18 @@ nav ul li a:hover {
 }
 
 .gallery-container {
+    max-width: 1200px; /* Set the maximum width */
+    width: 100%; /* Ensure it is responsive */
+    margin: 0 auto; /* Center the container */
     display: flex;
     align-items: center;
-    margin-bottom: 20px 0;
-    
+    margin-bottom: 20px;
+        
 }
 
 .gallery-text, .gallery-images {
     flex: 1;
-    padding: 20px;
+    padding: 20px;    
 }
 
 /* Reverse layout */
@@ -280,11 +283,11 @@ nav ul li a:hover {
 
 /* Gallery Images Styling */
 .gallery-images img {
-    max-width: 950px;
-    height: auto;
-    margin-bottom: 10px;
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain the image aspect ratio */
+    margin: 10px; /* Add some space between images */
+    border-radius: 10px; /* Adjust the value for more or less rounding */
 }
-
 .gallery-section {
     padding: 20px;
     background-color: #fff;
@@ -472,4 +475,26 @@ nav ul li a:hover {
     .gallery-images img {
         max-width: 100%; /* Full-width images on mobile */
     }
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366; /* WhatsApp green color */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.whatsapp-button:hover {
+    background-color: #1EBE54; /* Slightly darker green on hover */
+}
+
+.whatsapp-logo {
+    width: 20px; /* Adjust size */
+    height: 20px; /* Adjust size */
+    margin-right: 8px;
 }
