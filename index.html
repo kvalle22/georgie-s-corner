@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="dark-theme">
 
     <header class="container">
         <h1>‎ ‎ ‎ </h1>
@@ -20,13 +20,13 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#Spotify">Spotify</a></li>
                 <li><a href="#Windows">Windows</a></li>
-                <li><a href="#Streaming">Office</a></li>
-                <li><a href="#Office">Streaming</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#Office">Office</a></li>
+                <li><a href="#Streaming">Streaming</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
             <button id="menu-toggle">☰ Menu</button> <!-- Hamburger menu button -->
         </nav>
-                <!-- Dark Mode Toggle Button -->
+        <!-- Dark Mode Toggle Button -->
         <button id="theme-toggle">🌙 Dark Mode</button>
     </header>
 
@@ -39,15 +39,12 @@
             <img src="assets/happy_georgie.jpg" alt="Tiny Picture" class="home-image">
         </div>
     </section>
-    
-
-    
+    <audio id="click-sound" src="assets/georgie.wav" preload="auto"></audio>
     <section class="gallery-section container" id="Spotify">
         <!-- First Gallery Section: Text on the Left, Gallery on the Right -->
         <div class="gallery-container">
             <div class="gallery-text fade-in">
                 <h2>¿Quieres tener Spotify . . . pero sin tener que pagar mensualmente por membresías?</h2>
-
             </div>
             <div class="gallery-images fade-in">
                 <img src="assets/spotify/Spotify.jpg" alt="Image 1">
@@ -67,22 +64,19 @@
                 <a href="https://wa.me/+51972262734?text=Hola,%20quiero%20información%20sobre%20la%20activación%20de%20Spotify" class="whatsapp-button" target="_blank">
                     <img src="assets/whatsapp-logo.png" alt="WhatsApp Logo" class="whatsapp-logo"> Enviar mensaje por WhatsApp
                 </a>
-                
             </div>
             <div class="gallery-images fade-in">
                 <img src="assets/spotify/01.png" alt="Image 2">
                 <!-- Add more images as needed -->
             </div>
-
         </div>
     </section>
-    
+
     <section class="gallery-section container" id="Windows">
         <!-- First Gallery Section: Text on the Left, Gallery on the Right -->
         <div class="gallery-container">
             <div class="gallery-text fade-in">
-                <h2>Activación de Windows para remover esas molestas marcas de agua </h2>
-
+                <h2>Activación de Windows para remover esas molestas marcas de agua</h2>
             </div>
             <div class="gallery-images fade-in">
                 <img src="assets/windows/Activate-Windows01.png" alt="Image 1">
@@ -101,26 +95,23 @@
                 <a href="https://wa.me/+51972262734?text=Hola,%20quiero%20información%20sobre%20la%20activación%20de%20Windows" class="whatsapp-button" target="_blank">
                     <img src="assets/whatsapp-logo.png" alt="WhatsApp Logo" class="whatsapp-logo"> Enviar mensaje por WhatsApp
                 </a>
-
             </div>
             <div class="gallery-images fade-in">
                 <img src="assets/windows/win02.png" alt="Image 2">
                 <img src="assets/windows/win01.png" alt="Image 2">
                 <!-- Add more images as needed -->
             </div>
-
         </div>
     </section>
-    
+
     <section class="gallery-section container" id="Office">
         <!-- First Gallery Section: Text on the Left, Gallery on the Right -->
         <div class="gallery-container">
             <div class="gallery-text fade-in">
                 <h2>Activación de la suite de Microsoft Office</h2>
-
             </div>
             <div class="gallery-images fade-in">
-                <img src="assets/windows/Activate-Windows01.png" alt="Image 1">
+                <img src="assets/office/office365.png" alt="Image 1">
                 <!-- Add more images as needed -->
             </div>
         </div>
@@ -128,66 +119,203 @@
         <!-- Second Gallery Section: Gallery on the Left, Text on the Right -->
         <div class="gallery-container reverse">
             <div class="gallery-text fade-in">
-                <p>Además, tener Windows activado te permitirá personalizar el sistema como cambiar el fondo de pantalla, tema, colores, pantalla de bloqueo y más</p>
+                <p>Podrás usar todos los productos incluidos en la suite de office: Word, Excel, PowerPoint y muchos más.</p>
                 <p>‎</p>
-                <p>También te permitirá recibir actualizaciones y para usuarios más avanzados habilitará el control remoto en tu computadora</p>
+                <p>Versiones soportadas: Microsoft 365, Office 2021, Office 2019, Office 2016, Office 2013</p>
+                <p>‎</p>
                 <!-- WhatsApp Button -->
-                <a href="https://wa.me/+51972262734?text=Hola,%20quiero%20información%20sobre%20la%20activación%20de%20Windows" class="whatsapp-button" target="_blank">
+                <a href="https://wa.me/+51972262734?text=Hola,%20quiero%20información%20sobre%20la%20activación%20de%20Office" class="whatsapp-button" target="_blank">
                     <img src="assets/whatsapp-logo.png" alt="WhatsApp Logo" class="whatsapp-logo"> Enviar mensaje por WhatsApp
                 </a>
-
             </div>
             <div class="gallery-images fade-in">
-                <img src="assets/windows/win02.png" alt="Image 2">
-                <img src="assets/windows/win01.png" alt="Image 2">
+                <img src="assets/office/office01.png" alt="Image 2">
                 <!-- Add more images as needed -->
             </div>
-
         </div>
     </section>
 
-      
-    <!-- <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br><br>
-            <input type="submit" value="Submit">
-        </form>
-    </section> -->
+    <section class="gallery-section container" id="Streaming">
+        <!-- First Gallery Section: Text on the Left, Gallery on the Right -->
+        <div class="gallery-container">
+            <div class="gallery-text fade-in">
+                <h2>¿Cansado de que el contenido que quieres ver se encuentra disperso en varias plataformas?</h2>
+            </div>
+            <div class="gallery-images fade-in">
+                <img src="assets/plex/services.png" alt="Image 1">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-images fade-in">
+                <img src="assets/plex/no-autorizo.png" alt="Image 1">
+                <!-- Add more images as needed -->
+            </div>
+            <div class="gallery-text fade-in">
+                <h2>¿O tener que compartir cuentas con desconocidos?</h2>
+            </div>
+        </div>
 
+        <!-- Benefits Section Integrated -->
+        <div class="gallery-container benefits-container fade-in">
+            <div class="benefit-list-container fade-in">
+                <h1>Con acceso a un servidor privado de películas y series obtendrás:</h1>
 
+                <ul class="benefit-list">
+                    <li>
+                        <h2>Cuentas Personales</h2>
+                        <p>Tendrás acceso con tu propia cuenta, puedes usar tu correo personal.</p>
+                    </li>
+                    <li>
+                        <h2>Multiplataforma</h2>
+                        <p>Contenido de Netflix, Disney, Paramount, Apple, HBO, Amazon Prime, Viki, Crunchyroll y muchos más dentro de un solo lugar, olvidate de logearte con varias cuentas.</p>
+                    </li>
+                    <li>
+                        <h2>Contenido Exclusivo</h2>
+                        <p>Dentro del servidor podrás encontrar contenido exclusivo como extras, versiones extendidas, versiones BluRay y muchos más.</p>
+                    </li>
+                    <li>
+                        <h2>A demanda de los usuarios</h2>
+                        <p>¿Te gusta alguna serie en emisión y no lo encuentras en el servidor? No te preocupes, puedes escribirme en cualquier momento y será añadida.</p>
+                    </li>
+                    <li>
+                        <h2>Periodo de prueba gratuita</h2>
+                        <p>Te brindo acceso completo y gratuito durante 7 días.</p>
+                    </li>
+                </ul>
+            </div>
 
+            <div class="gallery-images fade-in">
+                <img src="assets/plex/imax.png" alt="Image 2">
+                <img src="assets/plex/specials.png" alt="Image 2">
+                <!-- <img src="assets/plex/extended.png" alt="Image 2"> -->
+                <!-- Add more images as needed -->
+            </div>
+
+            <!-- <div class="gallery-text fade-in">
+                <h1>Rice AGAIN</h1>
+            </div> -->
+
+        </div>        
+    <!-- Large Image Section -->
+    <!-- <div class="largegallery-container">
+        <h2 class="collapsible-title" onclick="toggleImage(this)">Colección Infinity Saga (Clickear para mostrar/ocultar)</h2>
+        <img src="assets/plex/marvel_collection.png" alt="Large Image" class="large-image collapsible-content">
+        <h2 class="collapsible-title" onclick="toggleImage(this)">Colección Studio Ghibli (Clickear para mostrar/ocultar)</h2>
+        <img src="assets/plex/Ghibli_collection.png" alt="Large Image" class="large-image collapsible-content">
+
+    </div> -->
     
+    <section class="largegallery-container">
+        <h2>Colecciones dentro del servidor</h2>
+
+        <div class="collapsible-item">
+            <div class="collapsible-title" onclick="toggleImage(this)">
+                <span>Colección Infinity Saga (Clickear para mostrar/ocultar)</span>
+                <span class="collapsible-toggle">+</span>
+            </div>
+            <div class="collapsible-content">
+                <img src="assets/plex/marvel_collection.png" alt="Infinity Saga Collection" class="large-image">
+            </div>
+        </div>
+
+        <div class="collapsible-item">
+            <div class="collapsible-title" onclick="toggleImage(this)">
+                <span>Colección Studio Ghibli (Clickear para mostrar/ocultar)</span>
+                <span class="collapsible-toggle">+</span>
+            </div>
+            <div class="collapsible-content">
+                <img src="assets/plex/Ghibli_collection.png" alt="Studio Ghibli Collection" class="large-image">
+            </div>
+        </div>
+
+        <div class="collapsible-item">
+            <div class="collapsible-title" onclick="toggleImage(this)">
+                <span>Colección Harry Potter (Clickear para mostrar/ocultar)</span>
+                <span class="collapsible-toggle">+</span>
+            </div>
+            <div class="collapsible-content">
+                <img src="assets/plex/harry_collection.png" alt="Harry Potter Collection" class="large-image">
+            </div>
+        </div>
+        <div class="collapsible-item">
+            <div class="collapsible-title" onclick="toggleImage(this)">
+                <span>Colección Star Wars (Clickear para mostrar/ocultar)</span>
+                <span class="collapsible-toggle">+</span>
+            </div>
+            <div class="collapsible-content">
+                <img src="assets/plex/starwars_collection.png" alt="Star Wars Collection" class="large-image">
+            </div>
+        </div>
+
+    </section>
+
+        <!-- Second Gallery Section: Gallery on the Left, Text on the Right -->
+        <div class="gallery-container reverse">
+            <div class="gallery-text fade-in">
+                <p>¿Quieres más información? ¡Envíame un mensaje!</p>
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/+51972262734?text=Hola,%20quiero%20información%20sobre%20el%20servidor%20privado" class="whatsapp-button" target="_blank">
+                    <img src="assets/whatsapp-logo.png" alt="WhatsApp Logo" class="whatsapp-logo"> Enviar mensaje por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+
     <section class="container" id="faq">
-        <h2>Frequently Asked Questions</h2>
+        <h2>Preguntas Frecuentes (FAQ)</h2>
         <div class="faq-item">
             <div class="faq-question" onclick="toggleAnswer(this)">
-                <span>What is your return policy?</span>
+                <span>¿Cuál es el precio de tus servicios?</span>
                 <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-                <p>Our return policy is 30 days for a full refund. Please ensure the item is in its original condition.</p>
+                <p>Los precios varían dependiendo del servicio que necesites.<br> 
+                    ‣  Spotify - 10 soles<br> 
+                    ‣  Windows activación - 10 soles<br> 
+                    ‣  Office instalación y activación - 15 soles<br> 
+                    ‣  Streaming (servidor privado de películas y series) - 25 soles mensuales - 7 días de prueba gratuita<br> 
+                    ‣  Adobe instalación y activación - 15 soles<br></p>
             </div>
         </div>
         <div class="faq-item">
             <div class="faq-question" onclick="toggleAnswer(this)">
-                <span>How do I track my order?</span>
+                <span>¿Realizas instalación de otros programas?</span>
                 <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-                <p>You can track your order using the tracking number provided in your confirmation email.</p>
+                <p>Sí, también puedes preguntar por otros programas que no se encuentren descritos aquí.</p>
             </div>
         </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>¿Dónde realizas la activación/ instalación?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Todos los servicios ofrecidos son totalmente virtuales. Las instalaciones/activaciones se hacen remotamente.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>¿Tienes Discord, te puedo escribir por ahí?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Sí, este es el link de mi perfil y si gustas escribirme por ahí eres bienvenido de hacerlo.</p>
+                <a href="https://discord.com/users/468232670254596097" class="discord-button" target="_blank">
+                    <!-- <img src="assets/ramiro.png" alt="Discord Icon" class="discord-icon"> -->
+                    Enviar mensaje por Discord
+                </a>                
+            </div>
+        </div>
+
         <!-- Add more FAQ items as needed -->
     </section>
 
     <footer class="container">
-        <p>&copy; 2024 Kaze@ RHEnterprises. All Rights Reserved.</p>
+        <p>&copy; 2024 Kaze @ RabbitHole. All Rights Reserved.</p>
     </footer>
 
     <!-- Add JavaScript here, before the closing body tag -->

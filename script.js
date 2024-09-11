@@ -40,9 +40,94 @@ function toggleAnswer(questionElement) {
 // Existing JavaScript...
 
 // Toggle mobile menu
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.querySelector('nav ul');
+// const menuToggle = document.getElementById('menu-toggle');
+// const navMenu = document.querySelector('nav ul');
 
-menuToggle.addEventListener('click', function() {
-    navMenu.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
+// menuToggle.addEventListener('click', function() {
+//     navMenu.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
+// });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    let timeout;
+
+    function hideMenu() {
+        navMenu.classList.remove('active');
+    }
+
+    function startTimeout() {
+        clearTimeout(timeout);
+        timeout = setTimeout(hideMenu, 4000); // Hide after 4 seconds of inactivity
+    }
+
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        startTimeout(); // Restart timeout when menu is opened
+    });
+
+    navMenu.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            hideMenu(); // Hide menu when a link is clicked
+        }
+    });
+
+    // Reset timeout when user interacts with the menu
+    navMenu.addEventListener('mouseover', startTimeout);
+    navMenu.addEventListener('mouseout', startTimeout);
+});
+
+
+
+
+
+
+
+
+
+// document.querySelectorAll('.benefit-list h2').forEach(item => {
+//     item.addEventListener('click', () => {
+//         const nextElement = item.nextElementSibling;
+//         if (nextElement.style.display === 'none') {
+//             nextElement.style.display = 'block';
+//         } else {
+//             nextElement.style.display = 'none';
+//         }
+//     });
+// });
+
+// function toggleImage(element) {
+//     // Find the next sibling element (the <img> tag) and toggle its visibility
+//     const content = element.nextElementSibling;
+//     if (content.style.display === "none" || content.style.display === "") {
+//         content.style.display = "block"; // Show the image
+//     } else {
+//         content.style.display = "none";  // Hide the image
+//     }
+// }
+
+
+function toggleImage(element) {
+    const content = element.nextElementSibling;
+    const toggle = element.querySelector('.collapsible-toggle');
+
+    if (content.style.maxHeight) {
+        // Hide the content
+        content.style.maxHeight = null;
+        toggle.textContent = "+";
+    } else {
+        // Show the content
+        content.style.maxHeight = content.scrollHeight + "px";
+        toggle.textContent = "-";
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var image = document.querySelector('.home-image');
+    var sound = document.getElementById('click-sound');
+
+    image.addEventListener('click', function() {
+        sound.play();
+    });
 });
