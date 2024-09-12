@@ -345,10 +345,18 @@ nav ul li a:hover {
     margin-bottom: 15px; /* Space below the header */
 }
 
+/* Justify text on mobile screens */
+@media (max-width: 768px) {
+    .gallery-text h2 {
+        text-align: center;
+    }
+}
+
 .gallery-text p {
     font-size: 1.1rem; /* Example size */
     line-height: 1.5; /* Improve readability */
     margin-bottom: 10px; /* Space between paragraphs */
+    text-align: justify;
 }
 
 /* Container for the image and text */
@@ -437,6 +445,8 @@ nav ul li a:hover {
 
     .home-image {
         max-width: 150px; /* Adjust image size for mobile */
+        display: block;
+        margin: 20px auto; /* Adjust the margin value as needed */
     }
 
     /* FAQ section */
@@ -679,3 +689,13 @@ body.dark-theme .collapsible-title {
     height: 20px; /* Adjust size as needed */
     margin-right: 8px; /* Space between the icon and text */
 }
+
+/* Centering the WhatsApp button on mobile screens */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        display: block; /* Makes the button a block-level element */
+        margin: 0 auto; /* Centers the button horizontally */
+        width: fit-content; /* Adjusts width to fit the content */
+    }
+}
+
