@@ -6,7 +6,7 @@ const body = document.body;
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme) {
     body.classList.add(currentTheme); // Apply saved theme
-    toggleButton.textContent = currentTheme === 'dark-theme' ? '☀️ Light Mode' : '🌙 Dark Mode';
+    toggleButton.textContent = currentTheme === 'dark-theme' ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
 }
 
 // Toggle theme on button click
@@ -15,10 +15,10 @@ toggleButton.addEventListener('click', function () {
     
     // Update button text based on theme
     if (body.classList.contains('dark-theme')) {
-        toggleButton.textContent = '☀️ Light Mode';
+        toggleButton.textContent = '☀️ Modo Claro';
         localStorage.setItem('theme', 'dark-theme'); // Save the theme in localStorage
     } else {
-        toggleButton.textContent = '🌙 Dark Mode';
+        toggleButton.textContent = '🌙 Modo Oscuro';
         localStorage.setItem('theme', ''); // Clear saved theme
     }
 });

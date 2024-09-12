@@ -229,6 +229,17 @@ header {
     height: 250px; /* Adjust header height */
 
 }
+
+/* Mobile-specific header styles */
+@media (max-width: 768px) {
+    header {
+        background-image: url('assets/1x/Asset\ 1.png'); /* Mobile-specific image */
+        height: 200px; /* Adjust height for mobile */
+    }
+}
+
+
+
 /* Navigation bar styles */
 nav {
     position: fixed; /* To move it outside of the normal flow */
@@ -381,18 +392,18 @@ nav ul li a:hover {
     }
 
     nav ul li {
-        margin-bottom: 10px; /* Space between menu items */
+        margin-bottom: 1px; /* Space between menu items */
     }
 
     /* Add a menu toggle button (hamburger) */
     #menu-toggle {
         display: block;
         position: absolute;
-        top: 10px;
-        left: 10px; /* Move it to the left side */
+        top: 5px;
+        left: 5px; /* Move it to the left side */
         background-color: #000;
         color: #fff;
-        padding: 10px;
+        padding: 5px 15px;
         cursor: pointer;
         font-size: 18px;
         z-index: 1001;
