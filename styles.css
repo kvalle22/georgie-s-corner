@@ -218,7 +218,7 @@ body.dark-theme #faq .faq-toggle {
 }
 
 header {
-    background-image: url('assets/georgie banner.png'); /* Adjust the path if necessary */
+    background-image: url('assets/georgie_banner-01.png'); /* Adjust the path if necessary */
     background-size: cover; /* Ensure the image covers the entire header */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
